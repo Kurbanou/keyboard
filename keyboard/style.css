@@ -1,0 +1,225 @@
+:root {
+  --dark-color: #262626; 
+  --dark-font: #545454; 
+  --dark-head: #222; 
+  --dark-link: #222; 
+  --hover-link: #545454; 
+  --inner-logo: #fff5ed;
+  --golden-cream: #d3c4a6; 
+  --green: #87e64b; 
+  --btn-color: #6f9a37;
+  --dove-gray: #f6f6f6; 
+  --font-size: 18px;
+  --section-padding: calc(1rem + 5vw) 0;    
+  --font-familyVibes: "Lora", serif;    
+  --font-nav: "Kablammo", serif;   
+  --font-logo: "Bebas Neue", serif;   
+  --font-h: "Oswald", serif;
+  --font-roboto: "Roboto", serif;   
+  --header-text-color: #ccc;
+  --header-link-color: #fff;
+  --header-link-hover-color: #ecd8b5;
+  --logo-max-width: 200px;
+  --search-icon-color: #fff;
+  --social-button-icon-color: #fff;
+  --social-button-icon-hover-color: #fff;
+  --social-button-border-color: rgba(255, 255, 255, .2);
+  --social-button-border-hover-color: rgba(255, 255, 255, .4);
+  --background-color: #fff;
+  --text-color: #333;
+  --secondary-text-color: #aaa;
+  --heading-color: #222;
+  --link-color: #222;
+  --link-hover-color: #665;
+  --paragraph-link-color: #c8ab77;
+  --paragraph-link-hover-color: #a9874a;
+  --category-underline-color: #f5e9d9;
+  --category-link-color: #222;
+  --category-link-hover-color: #665;
+  --button-background-color: #cbb78f;
+  --button-background-hover-color: #bba579;
+  --button-text-color: #fff;
+  --button-text-hover-color: #fff;
+  --primary-nav-bg-color: #fff;
+  --primary-bg-color: #f6f6f6;
+  --primary-nav-border-color: #f5f5f5;
+  --primary-nav-link-color: #222;
+  --primary-nav-link-hover-color: #a9874a;
+  --primary-nav-submenu-bg-color: #f5f5f5;
+  --primary-nav-submenu-link-color: #222;
+  --primary-nav-submenu-link-hover-color: #a9874a;
+  --primary-nav-divider-color: #ddd;
+  --input-placeholder-color: #bababa;
+}
+
+
+/* RESET CSS */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Сброс стилей для всех элементов */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+
+/* Обнуляем списки и ссылки */
+ul,
+ol {
+list-style: none;
+}
+
+/* Обнуляем таблицы */
+table {	
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Сброс стилей для изображений */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Обнуляем кнопки и формы */
+button,
+input,
+select,
+textarea {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+/* Обнуляем дефолтные стили для ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Обнуляем стили для абзацев и заголовков */
+p,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Убираем фон в input, button */
+input[type="button"],
+input[type="submit"] {
+  background: none;
+  border: none;
+}
+
+/* Убираем дефолтные стили у hr */
+hr {
+  border: none;
+  height: 1px;
+  background: #ccc;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    min-height: 100vh;
+}
+
+.textDisplay {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid var(--dove-gray);
+  border-radius: 8px;
+  font-size: var(--font-size);
+  font-family: var(--font-roboto);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  resize: none;
+  outline: none;
+}
+
+.textDisplay:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 10px var(--green);
+}
+
+#app {
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {  
+  font-family: var(--font-h);
+  font-size: .8rem;  
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  text-transform: uppercase;
+  cursor: pointer; 
+  padding: 20px;  
+  line-height: 1;
+  width: fit-content;
+  height: 60px;
+  display: flex;
+  align-items: center;  
+  font-style:normal;
+}
+  
+button:hover {
+  background-color: var(--button-background-hover-color);
+  color: var(--button-text-hover-color);
+}
+
+.virtual-keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px;
+}
+
+.keyboard_row {
+  display: flex;
+  gap: 3px;
+}
+
+.keyboard_btn,
+.functional_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  height: 30px;
+  border-radius: 5px;
+  padding: 15px 10px; 
+}
+
+.keyboard_btn.active,
+.functional_btn.active {
+  background-color: var(--btn-color);
+}
+
+.keyboard_btn:active,
+.functional_btn:active {
+  transform: scale(0.95);
+  background-color: var(--btn-color);
+}
